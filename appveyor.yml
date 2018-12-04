@@ -1,5 +1,4 @@
 version: 1.0.{build}
-environment:
 install:
 - cmd: nuget sources add -Name LitiumNugetFeed -Source https://nuget.litium.com/nuget/ -UserName %litium_nuget_user% -Password %litium_nuget_password%
 before_build:
