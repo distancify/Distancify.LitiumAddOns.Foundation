@@ -8,6 +8,12 @@ install:
 - cmd: nuget sources add -Name LitiumNugetFeed -Source https://nuget.litium.com/nuget/ -UserName %litium_nuget_user% -Password %litium_nuget_password%
 before_build:
 - cmd: nuget restore -Verbosity quiet
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
 build:
   verbosity: minimal
 after_build:
