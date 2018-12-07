@@ -39,11 +39,8 @@ namespace Distancify.LitiumAddOns.Foundation.Tests
         {
             var sut = new TaskMock();
 
-            var tasks = new Task[] {
-                Task.Run(() => sut.ExecuteTask(null, null)),
-                Task.Run(() => sut.ExecuteTask(null, null))
-            };
-            Task.WaitAll(tasks);
+            Task.Run(() => sut.ExecuteTask(null, null)).Wait();
+            Task.Run(() => sut.ExecuteTask(null, null)).Wait();
 
             Assert.Equal(2, sut.NumberOfCalls);
         }
