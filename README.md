@@ -4,6 +4,13 @@
 
 This project contains a couple of abstractions and implementations that are commonly used among all our Litium Add-Ons.
 
+## Litium Compatibility Chart
+
+| Library Version | Targeted Litium Version |
+| --------------- | ----------------------- |
+| 1.x             | 6.x                     |
+| 2.x             | 7.x                     |
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
