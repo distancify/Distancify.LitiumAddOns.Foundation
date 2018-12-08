@@ -7,6 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distancify.LitiumAddOns.Fou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5D194AE9-4109-42B8-97CC-775E49FF38CF}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		CONTRIBUTING.md = CONTRIBUTING.md
+		git_commit_template.txt = git_commit_template.txt
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
