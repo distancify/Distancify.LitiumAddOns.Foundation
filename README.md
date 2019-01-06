@@ -15,6 +15,12 @@ This project contains a couple of abstractions and implementations that are comm
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+### Install
+
+```
+Install-Package Distancify.LitiumAddOns.Foundation
+```
+
 ### Prerequisites
 
 This library aims at extending the e-comemrce platform [Litium](https://www.litium.se/). In order to build and develop the project, you need to fulfill their [development system requirements](https://docs.litium.com/documentation/get-started/system-requirements#DevEnv).
