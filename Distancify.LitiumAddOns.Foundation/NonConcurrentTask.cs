@@ -3,7 +3,7 @@ using System.Threading;
 using Litium.Foundation.Security;
 using Litium.Foundation.Tasks;
 
-namespace Distancify.LitiumAddOns.Tasks
+namespace Distancify.LitiumAddOns.Foundation
 {
     /// <summary>
     /// <para>
@@ -24,13 +24,7 @@ namespace Distancify.LitiumAddOns.Tasks
     public abstract class NonConcurrentTask : ITask
     {
         private static volatile ConcurrentDictionary<string, object> _taskSpecificLocks = new ConcurrentDictionary<string, object>();
-        private object TaskSpecificLock
-        {
-            get
-            {
-                return _taskSpecificLocks.GetOrAdd(GetType().Name, new object());
-            }
-        }
+        private object TaskSpecificLock => _taskSpecificLocks.GetOrAdd(GetType().Name, new object());
 
         public void ExecuteTask(SecurityToken token, string parameters)
         {
