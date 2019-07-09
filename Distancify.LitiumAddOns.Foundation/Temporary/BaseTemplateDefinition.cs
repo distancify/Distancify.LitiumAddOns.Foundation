@@ -5,7 +5,7 @@ using Litium.FieldFramework;
 using Litium.Runtime.AutoMapper;
 using Litium.Runtime.DependencyInjection;
 
-namespace Distancify.LitiumAddOns.CMS.Pages
+namespace Distancify.LitiumAddOns.Foundation.Temporary
 {
     [Service(ServiceType = typeof(BaseTemplateDefinition))]
     public abstract class BaseTemplateDefinition

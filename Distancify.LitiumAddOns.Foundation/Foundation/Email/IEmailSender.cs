@@ -1,4 +1,4 @@
-﻿namespace Distancify.LitiumAddOns.Foundation.Email
+﻿namespace Distancify.LitiumAddOns.Foundation.Foundation.Email
 {
     public interface IEmailSender
     {

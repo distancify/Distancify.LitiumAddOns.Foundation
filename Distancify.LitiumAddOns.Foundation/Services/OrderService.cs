@@ -1,4 +1,9 @@
-﻿using Distancify.LitiumAddOns.Tasks.Synchronization;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Distancify.LitiumAddOns.Foundation.Extensions;
+using Distancify.LitiumAddOns.Foundation.Tasks.Synchronization;
 using Litium;
 using Litium.Customers;
 using Litium.Foundation;
@@ -15,13 +20,8 @@ using Litium.Globalization;
 using Litium.Products;
 using Litium.Security;
 using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using Distancify.LitiumAddOns.Foundation.Extensions;
 
-namespace Distancify.LitiumAddOns.Services
+namespace Distancify.LitiumAddOns.Foundation.Services
 {
     public class OrderService : IOrderService
     {

@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace Distancify.LitiumAddOns.Foundation.Http
+namespace Distancify.LitiumAddOns.Foundation.Foundation.Http
 {
     public class TextRequest : HttpRequest<string>
     {

@@ -1,12 +1,12 @@
-﻿using Litium.Owin.Lifecycle;
-using Microsoft.Azure.ServiceBus;
-using Polly;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Distancify.SerilogExtensions;
+using Litium.Owin.Lifecycle;
+using Microsoft.Azure.ServiceBus;
+using Polly;
 
-namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
+namespace Distancify.LitiumAddOns.Foundation.Integrations.AzureServiceBus
 {
     public abstract class MessageQueueListener : IStartupTask
     {

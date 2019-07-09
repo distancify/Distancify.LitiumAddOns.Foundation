@@ -9,7 +9,7 @@ using Litium.Foundation;
 using Litium.Owin.Lifecycle;
 using Litium.Runtime;
 
-namespace Distancify.LitiumAddOns.Fields
+namespace Distancify.LitiumAddOns.Foundation.Fields
 {
     public abstract class FieldAndTemplateSetup<TArea> : IStartupTask where TArea : IArea
     {

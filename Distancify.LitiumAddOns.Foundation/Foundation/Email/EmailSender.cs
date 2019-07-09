@@ -6,7 +6,7 @@ using Distancify.SerilogExtensions;
 using Litium.Foundation.Configuration;
 using Litium.ServiceBus;
 
-namespace Distancify.LitiumAddOns.Foundation.Email
+namespace Distancify.LitiumAddOns.Foundation.Foundation.Email
 {
     public class EmailSender : IEmailSender
     {
@@ -39,7 +39,7 @@ namespace Distancify.LitiumAddOns.Foundation.Email
 
             public EmailQueueProcessor(string host, bool enableSsl, string username, string password)
             {
-                if (String.IsNullOrEmpty(host))
+                if (string.IsNullOrEmpty(host))
                 {
                     throw new ConfigurationErrorsException("Host is not set.");
                 }
@@ -53,7 +53,7 @@ namespace Distancify.LitiumAddOns.Foundation.Email
                     DeliveryMethod = DELIVERY_METHOD
                 };
 
-                if (!String.IsNullOrEmpty(username) && !String.IsNullOrEmpty(password))
+                if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
                 {
                     SmtpClient.Credentials = new NetworkCredential(username, password);
                 }

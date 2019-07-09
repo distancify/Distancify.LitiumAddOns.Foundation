@@ -1,7 +1,7 @@
-﻿using Litium.Globalization;
-using System;
+﻿using System;
+using Litium.Globalization;
 
-namespace Distancify.LitiumAddOns.Models
+namespace Distancify.LitiumAddOns.Foundation.Models
 {
     public class ChannelModel
     {

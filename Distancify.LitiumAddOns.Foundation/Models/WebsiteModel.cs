@@ -1,7 +1,7 @@
-﻿using Litium.Websites;
-using System;
+﻿using System;
+using Litium.Websites;
 
-namespace Distancify.LitiumAddOns.Models
+namespace Distancify.LitiumAddOns.Foundation.Models
 {
     public class WebsiteModel
     {

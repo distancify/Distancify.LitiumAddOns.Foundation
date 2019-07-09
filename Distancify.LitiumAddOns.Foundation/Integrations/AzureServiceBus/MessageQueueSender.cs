@@ -1,10 +1,10 @@
-﻿using Microsoft.Azure.ServiceBus;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Distancify.SerilogExtensions;
+using Microsoft.Azure.ServiceBus;
 
-namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
+namespace Distancify.LitiumAddOns.Foundation.Integrations.AzureServiceBus
 {
     public abstract class MessageQueueSender
     {

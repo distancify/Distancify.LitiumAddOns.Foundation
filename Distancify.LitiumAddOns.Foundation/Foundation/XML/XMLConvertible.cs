@@ -3,7 +3,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Distancify.LitiumAddOns.Foundation.XML
+namespace Distancify.LitiumAddOns.Foundation.Foundation.XML
 {
     public abstract class XMLConvertible
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Distancify.LitiumAddOns.Tasks.Synchronization
+namespace Distancify.LitiumAddOns.Foundation.Tasks.Synchronization
 {
     public interface ITaskSynchronizer
     {   

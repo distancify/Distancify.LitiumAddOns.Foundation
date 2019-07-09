@@ -1,7 +1,7 @@
-﻿using Litium.Foundation.Modules.ECommerce.Orders;
-using System;
+﻿using System;
+using Litium.Foundation.Modules.ECommerce.Orders;
 
-namespace Distancify.LitiumAddOns.Models
+namespace Distancify.LitiumAddOns.Foundation.Models
 {
     public class OrderModel
     {

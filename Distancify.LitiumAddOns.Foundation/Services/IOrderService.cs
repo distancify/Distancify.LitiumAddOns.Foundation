@@ -1,11 +1,11 @@
 ﻿using System;
-using Litium.Foundation.Modules.ECommerce.Orders;
-using Litium.Runtime.DependencyInjection;
 using System.Collections.Generic;
 using Litium.Foundation.Modules.ECommerce.Carriers;
 using Litium.Foundation.Modules.ECommerce.Deliveries;
+using Litium.Foundation.Modules.ECommerce.Orders;
+using Litium.Runtime.DependencyInjection;
 
-namespace Distancify.LitiumAddOns.Services
+namespace Distancify.LitiumAddOns.Foundation.Services
 {
     [Service(
     ServiceType = typeof(IOrderService),

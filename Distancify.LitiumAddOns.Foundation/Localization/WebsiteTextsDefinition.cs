@@ -8,7 +8,7 @@ using Litium.Studio.Builders.CMS;
 using Litium.Studio.Builders.ReflectionExtensions;
 using Litium.Websites;
 
-namespace Distancify.LitiumAddOns.Localization
+namespace Distancify.LitiumAddOns.Foundation.Localization
 {
     [Service(ServiceType = typeof(WebsiteTextsDefinition), Lifetime = DependencyLifetime.Transient)]
     public abstract class WebsiteTextsDefinition

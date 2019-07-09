@@ -1,12 +1,12 @@
-﻿using Microsoft.Azure.ServiceBus;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Distancify.SerilogExtensions;
+using Microsoft.Azure.ServiceBus;
+using Newtonsoft.Json;
 
-namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
+namespace Distancify.LitiumAddOns.Foundation.Integrations.AzureServiceBus
 {
     public abstract class UTF8SerializedObjectMessageQueueListener<T> : MessageQueueListener
     {

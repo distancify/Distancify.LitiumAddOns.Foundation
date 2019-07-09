@@ -1,8 +1,8 @@
-﻿using Litium.Foundation.Modules.ECommerce.Deliveries;
+﻿using System;
+using Litium.Foundation.Modules.ECommerce.Deliveries;
 using Litium.Runtime.DependencyInjection;
-using System;
 
-namespace Distancify.LitiumAddOns.Services
+namespace Distancify.LitiumAddOns.Foundation.Services
 {
     [Service(ServiceType = typeof(IDeliveryMethodService), Lifetime = DependencyLifetime.Singleton)]
     public interface IDeliveryMethodService

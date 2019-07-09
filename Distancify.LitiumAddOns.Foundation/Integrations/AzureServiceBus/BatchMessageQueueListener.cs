@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 using Distancify.SerilogExtensions;
 using Litium.Owin.Lifecycle;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Azure.ServiceBus.Core;
 
-
-namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
+namespace Distancify.LitiumAddOns.Foundation.Integrations.AzureServiceBus
 {
     public abstract class BatchMessageQueueListener : IStartupTask
     {

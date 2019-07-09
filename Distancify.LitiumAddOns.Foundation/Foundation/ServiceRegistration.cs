@@ -1,10 +1,9 @@
 ﻿using System.Reflection;
-using Distancify.LitiumAddOns.Foundation.Email;
-using Distancify.LitiumAddOns.Tasks.Synchronization;
+using Distancify.LitiumAddOns.Foundation.Foundation.Email;
+using Distancify.LitiumAddOns.Foundation.Tasks.Synchronization;
 using Litium.Owin.InversionOfControl;
 
-
-namespace Distancify.LitiumAddOns.Foundation
+namespace Distancify.LitiumAddOns.Foundation.Foundation
 {
     public class ServiceRegistration : IComponentInstaller
     {

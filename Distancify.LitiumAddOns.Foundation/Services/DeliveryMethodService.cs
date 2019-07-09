@@ -1,8 +1,8 @@
-﻿using Litium.Foundation.Modules.ECommerce;
+﻿using System;
+using Litium.Foundation.Modules.ECommerce;
 using Litium.Foundation.Modules.ECommerce.Deliveries;
-using System;
 
-namespace Distancify.LitiumAddOns.Services
+namespace Distancify.LitiumAddOns.Foundation.Services
 {
     public class DeliveryMethodService : IDeliveryMethodService
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Distancify.LitiumAddOns.Models
+namespace Distancify.LitiumAddOns.Foundation.Models
 {
     public class AddressModel
     {

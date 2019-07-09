@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace Distancify.LitiumAddOns.Tasks.Synchronization
+namespace Distancify.LitiumAddOns.Foundation.Tasks.Synchronization
 {
     public class TaskSynchronizer : ITaskSynchronizer
     {

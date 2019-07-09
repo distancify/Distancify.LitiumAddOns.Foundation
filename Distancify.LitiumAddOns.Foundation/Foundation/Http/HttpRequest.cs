@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using Distancify.SerilogExtensions;
 
-namespace Distancify.LitiumAddOns.Foundation.Http
+namespace Distancify.LitiumAddOns.Foundation.Foundation.Http
 {
     public abstract class HttpRequest<T>
     {

@@ -1,4 +1,4 @@
-﻿namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
+﻿namespace Distancify.LitiumAddOns.Foundation.Integrations.AzureServiceBus
 {
     public static class AzureServiceBusConstants
     {

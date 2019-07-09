@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Litium.Owin.InversionOfControl;
 
-namespace Distancify.LitiumAddOns.Foundation.InversionOfControl
+namespace Distancify.LitiumAddOns.Foundation.Foundation.InversionOfControl
 {
     public static class ComponentRegistrationExtensions
     {

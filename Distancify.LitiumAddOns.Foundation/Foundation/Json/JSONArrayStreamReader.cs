@@ -3,7 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Distancify.LitiumAddOns.Foundation.Json
+namespace Distancify.LitiumAddOns.Foundation.Foundation.Json
 {
     public static class JSONArrayStreamReader
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Mail;
 
-namespace Distancify.LitiumAddOns.Foundation.Email
+namespace Distancify.LitiumAddOns.Foundation.Foundation.Email
 {
     public class ValidEmail
     {
@@ -13,7 +13,7 @@ namespace Distancify.LitiumAddOns.Foundation.Email
 
         public ValidEmail(string from, string to, string subject, string body, bool isBodyHtml)
         {
-            if (String.IsNullOrEmpty(from) || String.IsNullOrEmpty(to) || String.IsNullOrEmpty(subject) || String.IsNullOrEmpty(body))
+            if (string.IsNullOrEmpty(from) || string.IsNullOrEmpty(to) || string.IsNullOrEmpty(subject) || string.IsNullOrEmpty(body))
             {
                 throw new ArgumentException("\"from\", \"to\", \"subject\" and \"body\" must all be non-empty strings.");
             }
