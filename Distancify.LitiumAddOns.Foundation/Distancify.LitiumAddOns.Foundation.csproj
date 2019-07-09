@@ -577,8 +577,6 @@
     <Compile Include="Wrappers\IEntity.cs" />
     <Compile Include="Wrappers\IRepository.cs" />
     <Compile Include="Wrappers\LitiumAggregateRoot.cs" />
-    <Compile Include="Wrappers\MediaArchive\IFileMetadataProvider.cs" />
-    <Compile Include="Wrappers\MediaArchive\LitiumFileMetadataProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
