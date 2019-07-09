@@ -7,11 +7,6 @@ namespace Distancify.LitiumAddOns.Extensions
 {
     public static class CategoryServiceExtensions
     {
-        public static List<Category> GetFlattenedCategoryTree(this CategoryService categoryService, Guid assortmentId)
-        {
-            return categoryService.GetFlattenedCategoryTree(Guid.Empty, assortmentId);
-        }
-
         public static List<Category> GetFlattenedCategoryTree(this CategoryService categoryService, Guid categoryId, Guid assortmentId)
         {
             var categories = new List<Category>();
@@ -24,12 +19,6 @@ namespace Distancify.LitiumAddOns.Extensions
             }
 
             return categories;
-        }
-
-        public static IList<Category> GetAllCategories(this CategoryService categoryService, List<Guid> assortmentIds)
-        {
-            return assortmentIds.SelectMany(assortmentId => categoryService.GetFlattenedCategoryTree(Guid.Empty, assortmentId))
-                .ToList();
         }
     }
 }

@@ -3,8 +3,6 @@ using System.Globalization;
 using Litium;
 using Litium.Products;
 using Litium.FieldFramework;
-using System.Collections.Generic;
-using Litium.Foundation.Modules.ExtensionMethods;
 using Litium.Products.StockStatusCalculator;
 using System.Web;
 using Litium.Foundation.Security;
@@ -30,59 +28,6 @@ namespace Distancify.LitiumAddOns.Extensions
         public static string GetName(this Variant variant, CultureInfo cultureInfo)
         {
             return variant.Fields.GetValueWithFallback<string>(SystemFieldDefinitionConstants.Name, cultureInfo);
-        }
-
-        public static string GetTextFieldValueTranslation(this Variant variant, string fieldName, CultureInfo cultureInfo)
-        {
-            var fieldValue = variant.Fields.GetValue<string>(fieldName);
-
-            if (string.IsNullOrEmpty(fieldValue))
-            {
-                return string.Empty;
-            }
-
-            var translation = fieldName.GetFieldDefinitionForProducts().GetTranslation(fieldValue, cultureInfo);
-
-            return translation;
-        }
-
-        public static List<string> GetTextFieldValueTranslations(this Variant variant, string fieldName, CultureInfo cultureInfo)
-        {
-            var fieldValues = variant.Fields.GetValue<IEnumerable<string>>(fieldName);
-
-            var translations = new List<string>();
-
-            if (fieldValues != null)
-            {
-                foreach (var fieldValue in fieldValues)
-                {
-                    var translation = fieldName.GetFieldDefinitionForProducts().GetTranslation(fieldValue, cultureInfo);
-                    translations.Add(translation);
-                }
-            }
-
-            return translations;
-        }
-
-        public static string GetDescription(this Variant variant, CultureInfo cultureInfo, bool useBaseProductAsFallBack = false, bool useCommonMark = false)
-        {
-            return variant.GetTextFieldValue(SystemFieldDefinitionConstants.Description, cultureInfo, useBaseProductAsFallBack, useCommonMark);
-        }
-
-        public static string GetTextFieldValue(this Variant variant, string fieldName, CultureInfo cultureInfo, bool useBaseProductAsFallBack = false, bool useCommonMark = false)
-        {
-            var value = variant.Fields.GetValueWithFallback<string>(fieldName, cultureInfo);
-
-            if (string.IsNullOrEmpty(value) && useBaseProductAsFallBack)
-            {
-                value = variant.GetBaseProduct().Fields.GetValueWithFallback<string>(fieldName, cultureInfo);
-            }
-
-            if (!string.IsNullOrEmpty(value) && useCommonMark)
-            {
-                return CommonMark.CommonMarkConverter.Convert(value);
-            }
-            else return value;
         }
 
         public static decimal GetStockQuantity(this Variant variant, Guid websiteSystemId, Guid countrySystemId)

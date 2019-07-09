@@ -3,7 +3,6 @@ using System.Linq;
 using System.Collections.Generic;
 using Litium;
 using Litium.FieldFramework;
-using Litium.Globalization;
 using Litium.Websites;
 using Litium.Common;
 using Litium.Web.Models.Websites;
@@ -55,22 +54,13 @@ namespace Distancify.LitiumAddOns.Extensions
             {
                 return null;
             }
-            else 
+
+            if (pageInstances.Count > 1)
             {
-                if (pageInstances.Count > 1)
-                {
-                    throw new Exception(String.Format("Page type {0} has multiple instances in the same website(ID: {1}).", fieldTemplateSystemId, webSite.SystemId));
-                }
-
-                return pageInstances[0];
+                throw new Exception($"Page type {fieldTemplateSystemId} has multiple instances in the same website(ID: {webSite.SystemId}).");
             }
-        }
 
-        public static IEnumerable<Page> GetPageInstances(this WebsiteModel webSite, string fieldTemplate, int? max = null)
-        {
-            var template = FieldTemplateService.Get<PageFieldTemplate>(fieldTemplate);
-
-            return webSite.GetPageInstances(template != null ? template.SystemId : Guid.Empty, max);
+            return pageInstances[0];
         }
 
         public static IEnumerable<Page> GetPageInstances(this WebsiteModel webSite, Guid fieldTemplateSystemId, int? max = null)
@@ -92,8 +82,7 @@ namespace Distancify.LitiumAddOns.Extensions
 
         public static IEnumerable<Page> GetPublishedPages(this WebsiteModel webSite, Guid fieldTemplateSystemId)
         {
-            return webSite.GetChildPages()
-                .Where(p => p.FieldTemplateSystemId.Equals(fieldTemplateSystemId) && p.Status == ContentStatus.Published);
+            return webSite.GetChildPages().Where(p => p.FieldTemplateSystemId.Equals(fieldTemplateSystemId) && p.Status == ContentStatus.Published);
         }
 
         public static IEnumerable<Page> GetChildPages(this WebsiteModel website)

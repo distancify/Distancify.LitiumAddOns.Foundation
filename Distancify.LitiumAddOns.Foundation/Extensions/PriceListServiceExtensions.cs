@@ -7,7 +7,8 @@ namespace Distancify.LitiumAddOns.Extensions
 {
     public static class PriceListServiceExtensions
     {
-        public static void Create(this PriceListService priceListService, string priceListId, Guid currencySystemId, bool includeVat, decimal price, List<Guid> variantSystemIds)
+        public static void Create(this PriceListService priceListService, string priceListId, Guid currencySystemId, bool includeVat,
+            decimal price, List<Guid> variantSystemIds)
         {
             var priceList = new PriceList(currencySystemId)
             {

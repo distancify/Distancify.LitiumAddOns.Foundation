@@ -7,7 +7,8 @@ namespace Distancify.LitiumAddOns.Extensions
 {
     public static class VariantServiceExtensions
     {
-        public static IEnumerable<Variant> GetAllVariants(this VariantService variantService, FieldTemplateService fieldTemplateService, BaseProductService baseProductService, string templateId)
+        public static IEnumerable<Variant> GetAllVariants(this VariantService variantService,
+            FieldTemplateService fieldTemplateService, BaseProductService baseProductService, string templateId)
         {
             var fieldTemplate = fieldTemplateService.Get<ProductFieldTemplate>(templateId);
             var baseProducts = baseProductService.GetByTemplate(fieldTemplate.SystemId);

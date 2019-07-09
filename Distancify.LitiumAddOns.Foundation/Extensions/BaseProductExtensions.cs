@@ -3,7 +3,6 @@ using Litium.Products;
 using Litium.Foundation.Modules.ExtensionMethods;
 using Litium.FieldFramework;
 using System.Collections.Generic;
-using System;
 
 namespace Distancify.LitiumAddOns.Extensions
 {
@@ -36,40 +35,6 @@ namespace Distancify.LitiumAddOns.Extensions
             }
 
             return translations;
-        }
-
-        [Obsolete("Use `GetTranslatedTextOptionValues` instead")]
-        public static List<string> GetTextFieldValueTranslations(this BaseProduct baseProduct, string fieldName, CultureInfo cultureInfo)
-        {
-            var fieldValues = baseProduct.Fields.GetValue<IEnumerable<string>>(fieldName);
-
-            var translations = new List<string>();
-
-            if (fieldValues != null)
-            {
-                foreach (var fieldValue in fieldValues)
-                {
-                    var translation = fieldName.GetFieldDefinitionForProducts().GetTranslation(fieldValue, cultureInfo);
-                    translations.Add(translation);
-                }
-            }
-
-            return translations;
-        }
-
-        [Obsolete("Use `GetTranslatedTextOptionValues` instead and select the first entry in the return list")]
-        public static string GetTextFieldValueTranslation(this BaseProduct baseProduct, string fieldName, CultureInfo cultureInfo)
-        {
-            var fieldValue = baseProduct.Fields.GetValue<string>(fieldName);
-
-            if (string.IsNullOrEmpty(fieldValue))
-            {
-                return string.Empty;
-            }
-
-            var translation = fieldName.GetFieldDefinitionForProducts().GetTranslation(fieldValue, cultureInfo);
-
-            return translation;
         }
 
         public static string GetZeroTrimmedStringValueFromDecimalField(this BaseProduct baseProduct, string fieldName, CultureInfo cultureInfo, decimal multiplier = 1)
