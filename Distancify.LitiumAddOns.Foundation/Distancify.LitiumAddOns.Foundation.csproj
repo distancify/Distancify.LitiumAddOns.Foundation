@@ -570,9 +570,7 @@
     <Compile Include="Services\ICMSService.cs" />
     <Compile Include="Services\IDeliveryMethodService.cs" />
     <Compile Include="Services\IOrderService.cs" />
-    <Compile Include="Services\IOrganizationService.cs" />
     <Compile Include="Services\OrderService.cs" />
-    <Compile Include="Services\OrganizationService.cs" />
     <Compile Include="Tasks\Synchronization\ITaskSynchronizer.cs" />
     <Compile Include="Tasks\Synchronization\TaskSynchronizer.cs" />
     <Compile Include="Tasks\WorkflowAutomationsTask.cs" />
