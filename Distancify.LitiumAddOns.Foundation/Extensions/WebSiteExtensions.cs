@@ -63,6 +63,13 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
             return pageInstances[0];
         }
 
+        public static IEnumerable<Page> GetPageInstances(this WebsiteModel webSite, string fieldTemplate, int? max = null)
+        {
+            var template = FieldTemplateService.Get<PageFieldTemplate>(fieldTemplate);
+
+            return webSite.GetPageInstances(template != null ? template.SystemId : Guid.Empty, max);
+        }
+
         public static IEnumerable<Page> GetPageInstances(this WebsiteModel webSite, Guid fieldTemplateSystemId, int? max = null)
         {
             var publishedPages = webSite.GetPublishedPages(fieldTemplateSystemId);

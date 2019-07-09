@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Litium.Foundation.Modules.ECommerce.Carriers;
+using Litium.Foundation.Modules.ECommerce.Payments;
 
 namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
@@ -19,6 +20,16 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
             }
         }
 
+        public static void RemoveAdditionalOrderInfoValue(this OrderCarrier orderCarrier, string key)
+        {
+            var additionalInfoCarrier = orderCarrier.GetAdditionalOrderInfoCarrier(key);
+
+            if (additionalInfoCarrier != null)
+            {
+                orderCarrier.AdditionalOrderInfo.Remove(additionalInfoCarrier);
+            }
+        }
+
         private static AdditionalOrderInfoCarrier GetAdditionalOrderInfoCarrier(this OrderCarrier orderCarrier, string key)
         {
             return orderCarrier.AdditionalOrderInfo.FirstOrDefault(x => x.Key == key && !x.CarrierState.IsMarkedForDeleting);
@@ -30,6 +41,28 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
             {
                 orderCarrier.SetAdditionalOrderInfoValue(key, value);
             }
+        }
+
+        public static bool PaymentStatusEquals(this OrderCarrier orderCarrier, PaymentStatus paymentStatus)
+        {
+            var paymentInfoList = orderCarrier.PaymentInfo.Where(pic => !pic.CarrierState.IsMarkedForDeleting);
+
+            if (paymentInfoList.Count() == 0)
+            {
+                return false;
+            }
+
+            var paymentStatusAsShort = (short)paymentStatus;
+
+            foreach (var paymentInfo in paymentInfoList)
+            {
+                if (paymentInfo.PaymentStatus != paymentStatusAsShort)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
