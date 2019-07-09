@@ -1,10 +1,6 @@
 ﻿using Litium.Foundation.Modules.ECommerce;
 using Litium.Foundation.Modules.ECommerce.Deliveries;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Distancify.LitiumAddOns.Services
 {

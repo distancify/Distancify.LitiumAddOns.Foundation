@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Distancify.LitiumAddOns.Extensions;
 using Distancify.SerilogExtensions;
 using Litium.Customers;
@@ -18,7 +16,7 @@ namespace Distancify.LitiumAddOns.Fields
         private readonly FieldTemplateService _fieldTemplateService;
         private readonly FieldDefinitionService _fieldDefinitionService;
 
-        public FieldAndTemplateSetup(FieldTemplateService fieldTemplateService, FieldDefinitionService fieldDefinitionService)
+        protected FieldAndTemplateSetup(FieldTemplateService fieldTemplateService, FieldDefinitionService fieldDefinitionService)
         {
             _fieldTemplateService = fieldTemplateService;
             _fieldDefinitionService = fieldDefinitionService;

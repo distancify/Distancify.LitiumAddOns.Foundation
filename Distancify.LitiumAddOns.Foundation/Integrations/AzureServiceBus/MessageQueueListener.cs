@@ -17,7 +17,7 @@ namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
 
         private QueueClient _azureQueueClient;
 
-        public MessageQueueListener(string connectionString, string queueName, string listenerName, int maxConnectionRetries)
+        protected MessageQueueListener(string connectionString, string queueName, string listenerName, int maxConnectionRetries)
         {
             _connectionString = connectionString;
             _queueName = queueName;
@@ -32,7 +32,7 @@ namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
                 this.Log().Warning("Connection string not set - {ListenerName} is disabled", _listenerName);
                 return;
             }
-            else if (string.IsNullOrEmpty(_queueName))
+            if (string.IsNullOrEmpty(_queueName))
             {
                 this.Log().Warning("Queue name not set - {ListenerName} is disabled", _listenerName);
                 return;

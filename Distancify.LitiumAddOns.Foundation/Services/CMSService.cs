@@ -3,7 +3,6 @@ using System.Net;
 using System.Web;
 using Distancify.LitiumAddOns.Extensions;
 using Litium;
-using Litium.FieldFramework;
 using Litium.Foundation.Security;
 using Litium.Runtime.AutoMapper;
 using Litium.Web;
@@ -14,15 +13,11 @@ namespace Distancify.LitiumAddOns.Foundation.Services
 {
     public class CMSService : ICMSService
     {
-        private readonly FieldTemplateService _fieldTemplateService;
-        private readonly PageService _pageService;
         private readonly UrlService _urlService;
         private readonly WebsiteService _websiteService;
 
-        public CMSService(FieldTemplateService fieldTemplateService, PageService pageService, UrlService urlService, WebsiteService websiteService)
+        public CMSService(UrlService urlService, WebsiteService websiteService)
         {
-            _fieldTemplateService = fieldTemplateService;
-            _pageService = pageService;
             _urlService = urlService;
             _websiteService = websiteService;
         }

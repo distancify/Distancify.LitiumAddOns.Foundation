@@ -11,7 +11,7 @@ namespace Distancify.LitiumAddOns.Foundation.Http
         private readonly string _queryString;
         private readonly Encoding _encoding;
 
-        protected override Uri Uri { get { return new Uri(String.IsNullOrEmpty(_queryString) ? _url : $"{_url}?{_queryString}"); } }
+        protected override Uri Uri => new Uri(string.IsNullOrEmpty(_queryString) ? _url : $"{_url}?{_queryString}");
 
         public TextRequest(string url) : this(url, null, Encoding.UTF8) { }
 

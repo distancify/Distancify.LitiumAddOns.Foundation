@@ -71,10 +71,7 @@ namespace Distancify.LitiumAddOns.Foundation.XML
                 this.encoding = encoding;
             }
 
-            public override Encoding Encoding
-            {
-                get { return encoding; }
-            }
+            public override Encoding Encoding => encoding;
         }
     }
 }

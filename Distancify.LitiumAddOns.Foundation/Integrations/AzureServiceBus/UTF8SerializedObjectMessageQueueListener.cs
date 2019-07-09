@@ -12,7 +12,7 @@ namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
     {
         private readonly bool _logMessages;
 
-        public UTF8SerializedObjectMessageQueueListener(string connectionString, string queueName, string listenerName, int maxConnectionRetries, bool logMessages)
+        protected UTF8SerializedObjectMessageQueueListener(string connectionString, string queueName, string listenerName, int maxConnectionRetries, bool logMessages)
             : base(connectionString, queueName, listenerName, maxConnectionRetries) {
             _logMessages = logMessages;
         }

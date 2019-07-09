@@ -72,7 +72,7 @@ namespace Distancify.LitiumAddOns.Services
                 var orderIds = searchResponse.Hits.Select(h => Guid.Parse(h.Id));
                 return _moduleECommerce.Orders.GetOrders(orderIds, _token).ToList();
             }
-            else return new List<Order>();
+            return new List<Order>();
         }
 
         public void UpdateOrderState(Guid orderId, short newStateId)
@@ -348,9 +348,9 @@ namespace Distancify.LitiumAddOns.Services
                     return order;
 
                 }
-                else throw new OrderAccessException($"Order {orderGuid} does not exist");
+                throw new OrderAccessException($"Order {orderGuid} does not exist");
             }
-            else throw new OrderAccessException($"Unparsable Guid: {orderGuid}");
+            throw new OrderAccessException($"Unparsable Guid: {orderGuid}");
         }
 
         public class OrderAccessException : Exception

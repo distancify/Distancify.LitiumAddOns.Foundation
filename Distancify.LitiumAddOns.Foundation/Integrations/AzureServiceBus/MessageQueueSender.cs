@@ -45,17 +45,15 @@ namespace Distancify.LitiumAddOns.Integrations.AzureServiceBus
                 {
                     return _queueClient;
                 }
-                else if (!string.IsNullOrEmpty(ConnectionString) && ConnectionString != AzureServiceBusConstants.ConnectionStringPlaceHolder)
+                if (!string.IsNullOrEmpty(ConnectionString) && ConnectionString != AzureServiceBusConstants.ConnectionStringPlaceHolder)
                 {
                     _queueClient = new QueueClient(ConnectionString, QueueName);
 
                     return _queueClient;
                 }
-                else
-                {
-                    this.Log().Fatal("AzureConnectionString not set - listening for updates on Azure ServiceBus queue {QueueName} is disabled", QueueName);
-                    _queueClientInitializationFailed = true;
-                }
+
+                this.Log().Fatal("AzureConnectionString not set - listening for updates on Azure ServiceBus queue {QueueName} is disabled", QueueName);
+                _queueClientInitializationFailed = true;
             }
             else
             {

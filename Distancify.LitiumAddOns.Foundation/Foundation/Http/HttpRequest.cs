@@ -8,10 +8,10 @@ namespace Distancify.LitiumAddOns.Foundation.Http
     public abstract class HttpRequest<T>
     {
         protected abstract Uri Uri { get; }
-        protected virtual string Method { get { return null; }}
-        protected virtual string ContentType { get { return null; }}
-        protected virtual string Body { get { return null; } }
-        protected virtual HttpStatusCode? ExpectedStatusCode { get { return null; } }
+        protected virtual string Method => null;
+        protected virtual string ContentType => null;
+        protected virtual string Body => null;
+        protected virtual HttpStatusCode? ExpectedStatusCode => null;
         private const int TwentyMinutes = 1200000;
 
         public T GetResult(bool ignoreCertificateErrors = false)
@@ -19,9 +19,9 @@ namespace Distancify.LitiumAddOns.Foundation.Http
             try
             {
                 var request = (HttpWebRequest) WebRequest.Create(Uri);
-                if (!String.IsNullOrEmpty(Method)) request.Method = Method;
-                if (!String.IsNullOrEmpty(ContentType)) request.ContentType = ContentType;
-                if (!String.IsNullOrEmpty(Body)) SetRequestBody(request, Body);
+                if (!string.IsNullOrEmpty(Method)) request.Method = Method;
+                if (!string.IsNullOrEmpty(ContentType)) request.ContentType = ContentType;
+                if (!string.IsNullOrEmpty(Body)) SetRequestBody(request, Body);
                 request.Timeout = TwentyMinutes;
                 if(ignoreCertificateErrors)
                 {
@@ -30,7 +30,8 @@ namespace Distancify.LitiumAddOns.Foundation.Http
 
                 using (var response = (HttpWebResponse)request.GetResponse())
                 {
-                    if (ExpectedStatusCode != null && ExpectedStatusCode != response.StatusCode) throw new Exception(String.Format("Expected HTTP status code {0} from {1}, but was {2}.", ExpectedStatusCode, Uri, response.StatusCode));
+                    if (ExpectedStatusCode != null && ExpectedStatusCode != response.StatusCode) throw new Exception(
+                        $"Expected HTTP status code {ExpectedStatusCode} from {Uri}, but was {response.StatusCode}.");
 
                     return ProcessResponse(response);
                 }
@@ -38,7 +39,7 @@ namespace Distancify.LitiumAddOns.Foundation.Http
             catch (Exception ex)
             {
                 this.Log().Error(ex, "Failed to process request to {Uri}.", Uri);
-                throw ex;
+                throw;
             }
         }
 
