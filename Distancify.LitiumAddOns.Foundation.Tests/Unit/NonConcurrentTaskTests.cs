@@ -1,14 +1,8 @@
-﻿using Distancify.LitiumAddOns.Tasks;
-using NSubstitute;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Distancify.LitiumAddOns.Foundation.Tests
+namespace Distancify.LitiumAddOns.Foundation.Tests.Unit
 {
     public class NonConcurrentTaskTests
     {
@@ -27,10 +21,7 @@ namespace Distancify.LitiumAddOns.Foundation.Tests
                 }
             }
 
-            public int NumberOfCalls
-            {
-                get { return _numberOfCalls; }
-            }
+            public int NumberOfCalls => _numberOfCalls;
         }
 
         [Fact]
