@@ -505,16 +505,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComponentRegistrationExtensions.cs" />
-    <Compile Include="Conditions\Category\CategoryConditionConstants.cs" />
-    <Compile Include="Conditions\Category\CategoryConditionService.cs" />
-    <Compile Include="Conditions\Category\CategoryFilterCondition.cs" />
-    <Compile Include="Conditions\Category\CategoryFilterService.cs" />
-    <Compile Include="Conditions\Category\CategoryQueryExpressionInfo.cs" />
-    <Compile Include="Conditions\Category\CategoryQueryExpressionInfoBuilder.cs" />
-    <Compile Include="Conditions\Category\CategoryQueryFilterCondition.cs" />
-    <Compile Include="Conditions\Category\ConditionServiceResolver.cs" />
     <Compile Include="Extensions\AddressExtensions.cs" />
     <Compile Include="Extensions\BaseProductExtensions.cs" />
+    <Compile Include="Extensions\BaseProductServiceExtensions.cs" />
+    <Compile Include="Extensions\CategoryServiceExtensions.cs" />
     <Compile Include="Extensions\FieldDefinitionExtensions.cs" />
     <Compile Include="Extensions\FieldFrameworkExtensions.cs" />
     <Compile Include="Extensions\FieldTemplateFieldGroupExtensions.cs" />
@@ -550,17 +544,6 @@
     <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\WebsiteModel.cs" />
     <Compile Include="NonConcurrentTask.cs" />
-    <Compile Include="PIM\WorkflowAutomations\AssignCategoryAutomation.cs" />
-    <Compile Include="PIM\WorkflowAutomations\AssignMainCategoryAutomation.cs" />
-    <Compile Include="PIM\WorkflowAutomations\AutomatedUserSetup.cs" />
-    <Compile Include="PIM\WorkflowAutomations\AutomationConstants.cs" />
-    <Compile Include="PIM\WorkflowAutomations\IAutomatedUserSetup.cs" />
-    <Compile Include="PIM\WorkflowAutomations\IAutomationRunner.cs" />
-    <Compile Include="PIM\WorkflowAutomations\IWorkflowAutomation.cs" />
-    <Compile Include="PIM\WorkflowAutomations\ProductAutomationRunner.cs" />
-    <Compile Include="PIM\WorkflowAutomations\PublishProductAutomation.cs" />
-    <Compile Include="PIM\WorkflowAutomations\UnpublishProductAutomation.cs" />
-    <Compile Include="PIM\WorkflowAutomations\WorkflowAutomation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CMSService.cs" />
     <Compile Include="Services\DeliveryMethodService.cs" />
@@ -570,7 +553,6 @@
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="Tasks\Synchronization\ITaskSynchronizer.cs" />
     <Compile Include="Tasks\Synchronization\TaskSynchronizer.cs" />
-    <Compile Include="Tasks\WorkflowAutomationsTask.cs" />
     <Compile Include="Temporary\BaseTemplateDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
