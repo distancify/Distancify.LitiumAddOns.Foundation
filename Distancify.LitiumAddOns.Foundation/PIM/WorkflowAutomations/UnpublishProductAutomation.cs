@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Distancify.LitiumAddOns.Wrappers.CMS;
 using Litium.Globalization;
 using Litium.Products;
 using Litium.Workflows;

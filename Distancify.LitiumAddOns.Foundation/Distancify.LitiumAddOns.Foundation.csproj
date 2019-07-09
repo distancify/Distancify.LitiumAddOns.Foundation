@@ -575,10 +575,6 @@
     <Compile Include="Tasks\Synchronization\TaskSynchronizer.cs" />
     <Compile Include="Tasks\WorkflowAutomationsTask.cs" />
     <Compile Include="Temporary\BaseTemplateDefinition.cs" />
-    <Compile Include="Wrappers\CMS\IWebsite.cs" />
-    <Compile Include="Wrappers\CMS\IWebsiteRepository.cs" />
-    <Compile Include="Wrappers\CMS\LitiumWebsite.cs" />
-    <Compile Include="Wrappers\CMS\LitiumWebsiteRepository.cs" />
     <Compile Include="Wrappers\ECommerce\ICampaign.cs" />
     <Compile Include="Wrappers\ECommerce\LitiumCampaign.cs" />
     <Compile Include="Wrappers\Exceptions\NotFoundException.cs" />
