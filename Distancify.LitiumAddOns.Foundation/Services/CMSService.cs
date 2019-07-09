@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Web;
-using Distancify.LitiumAddOns.Extensions;
+using Distancify.LitiumAddOns.Foundation.Extensions;
 using Litium;
 using Litium.Foundation.Security;
 using Litium.Runtime.AutoMapper;

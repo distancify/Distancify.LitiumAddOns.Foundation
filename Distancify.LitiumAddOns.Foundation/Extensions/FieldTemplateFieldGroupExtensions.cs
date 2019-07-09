@@ -1,7 +1,7 @@
-﻿using Litium.FieldFramework;
-using System.Linq;
+﻿using System.Linq;
+using Litium.FieldFramework;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class FieldTemplateFieldGroupExtensions
     {

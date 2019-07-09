@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Litium.Products;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class PriceListExtensions
     {

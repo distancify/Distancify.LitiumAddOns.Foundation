@@ -515,7 +515,6 @@
     <Compile Include="Conditions\Category\ConditionServiceResolver.cs" />
     <Compile Include="Extensions\AddressExtensions.cs" />
     <Compile Include="Extensions\BaseProductExtensions.cs" />
-    <Compile Include="Extensions\CategoryServiceExtensions.cs" />
     <Compile Include="Extensions\FieldDefinitionExtensions.cs" />
     <Compile Include="Extensions\FieldFrameworkExtensions.cs" />
     <Compile Include="Extensions\FieldTemplateFieldGroupExtensions.cs" />
@@ -582,9 +581,7 @@
     <None Include="NLog.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ProductMedia\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

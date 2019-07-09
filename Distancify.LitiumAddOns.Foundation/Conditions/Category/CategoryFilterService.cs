@@ -1,22 +1,16 @@
-﻿using Litium.Runtime.DependencyInjection;
-using Litium.Web.Administration.Filtering;
+﻿using Litium.Web.Administration.Filtering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Litium.Data.Queryable.Conditions;
 using Litium.Products;
 using System.Text.RegularExpressions;
 using Distancify.LitiumAddOns.Conditions.Category;
-using Litium.Data.Queryable;
-using Litium.Runtime.AutoMapper;
-using AutoMapper;
 using Litium.Data.Queryable.Internal;
 using System.Globalization;
 using Litium.FieldFramework;
-using Distancify.LitiumAddOns.Extensions;
+using Distancify.LitiumAddOns.Foundation.Extensions;
 using FilterOperator = Litium.Web.Administration.Filtering.FilterOperator;
 
 namespace Distancify.LitiumAddOns.Conditions

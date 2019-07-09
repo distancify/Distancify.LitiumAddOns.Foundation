@@ -1,5 +1,4 @@
-﻿using Distancify.LitiumAddOns.Extensions;
-using Distancify.LitiumAddOns.Tasks.Synchronization;
+﻿using Distancify.LitiumAddOns.Tasks.Synchronization;
 using Litium;
 using Litium.Customers;
 using Litium.Foundation;
@@ -20,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Distancify.LitiumAddOns.Foundation.Extensions;
 
 namespace Distancify.LitiumAddOns.Services
 {

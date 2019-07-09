@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
 using Litium;
+using Litium.FieldFramework;
+using Litium.FieldFramework.FieldTypes;
 using Litium.Runtime.AutoMapper;
 using Litium.Web.Models;
 using Litium.Web.Models.Websites;
 using Litium.Websites;
-using System.Drawing;
-using Litium.FieldFramework.FieldTypes;
-using Litium.FieldFramework;
-using System.Globalization;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class PageModelExtensions
     {

@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using File = Litium.Media.File;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class FileExtensions
     {

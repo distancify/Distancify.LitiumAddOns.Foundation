@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Distancify.LitiumAddOns.Extensions;
+using Distancify.LitiumAddOns.Foundation.Extensions;
 using Distancify.SerilogExtensions;
 using Litium.Customers;
 using Litium.FieldFramework;

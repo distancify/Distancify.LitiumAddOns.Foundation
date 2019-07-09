@@ -7,7 +7,7 @@ using Litium.FieldFramework;
 using Litium.FieldFramework.FieldTypes;
 using Litium.Globalization;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class FieldDefinitionExtensions
     {   

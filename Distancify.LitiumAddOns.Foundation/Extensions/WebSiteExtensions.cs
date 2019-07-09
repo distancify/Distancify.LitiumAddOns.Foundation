@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 using Litium;
-using Litium.FieldFramework;
-using Litium.Websites;
 using Litium.Common;
+using Litium.FieldFramework;
 using Litium.Web.Models.Websites;
+using Litium.Websites;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class WebSiteExtensions
     {

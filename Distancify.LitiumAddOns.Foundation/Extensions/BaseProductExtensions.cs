@@ -1,10 +1,10 @@
-﻿using System.Globalization;
-using Litium.Products;
-using Litium.Foundation.Modules.ExtensionMethods;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using Litium.FieldFramework;
-using System.Collections.Generic;
+using Litium.Foundation.Modules.ExtensionMethods;
+using Litium.Products;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class BaseProductExtensions
     {
@@ -35,20 +35,6 @@ namespace Distancify.LitiumAddOns.Extensions
             }
 
             return translations;
-        }
-
-        public static string GetZeroTrimmedStringValueFromDecimalField(this BaseProduct baseProduct, string fieldName, CultureInfo cultureInfo, decimal multiplier = 1)
-        {
-            decimal fieldValue = baseProduct.Fields.GetValue<decimal>(fieldName);
-            string result = (multiplier == 1 ? fieldValue : fieldValue * multiplier).ToString(cultureInfo);
-            var decimalSeparator = cultureInfo.NumberFormat.NumberDecimalSeparator;
-
-            if (result.Contains(decimalSeparator))
-            {
-                result = result.TrimEnd('0').TrimEnd(decimalSeparator);
-            }
-
-            return result;
         }
 
         public static string GetName(this BaseProduct baseProduct, CultureInfo cultureInfo)

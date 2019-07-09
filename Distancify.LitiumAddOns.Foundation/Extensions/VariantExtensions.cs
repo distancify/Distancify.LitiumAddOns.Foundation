@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Globalization;
-using Litium;
-using Litium.Products;
-using Litium.FieldFramework;
-using Litium.Products.StockStatusCalculator;
 using System.Web;
+using Litium;
+using Litium.FieldFramework;
 using Litium.Foundation.Security;
+using Litium.Products;
+using Litium.Products.StockStatusCalculator;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class VariantExtensions
     {

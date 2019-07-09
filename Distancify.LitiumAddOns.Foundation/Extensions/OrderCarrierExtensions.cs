@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Litium.Foundation.Modules.ECommerce.Carriers;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class OrderCarrierExtensions
     {

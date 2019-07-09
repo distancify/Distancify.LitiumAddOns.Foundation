@@ -1,8 +1,8 @@
-﻿using Litium.FieldFramework;
+﻿using System.Globalization;
+using Litium.FieldFramework;
 using Litium.Globalization;
-using System.Globalization;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class FieldFrameworkExtensions
     {

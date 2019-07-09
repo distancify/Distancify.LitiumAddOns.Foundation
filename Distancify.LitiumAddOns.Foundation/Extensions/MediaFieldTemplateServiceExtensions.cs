@@ -1,8 +1,7 @@
-﻿using System;
-using Litium.FieldFramework;
+﻿using Litium.FieldFramework;
 using Litium.Media;
 
-namespace Distancify.LitiumAddOns.Extensions
+namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class MediaFieldTemplateServiceExtensions
     {
