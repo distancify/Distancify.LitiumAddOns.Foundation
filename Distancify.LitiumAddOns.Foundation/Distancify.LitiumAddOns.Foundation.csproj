@@ -54,6 +54,12 @@
     <Reference Include="Dapper.StrongName, Version=1.60.0.0, Culture=neutral, PublicKeyToken=e3e8412083d25dd3, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.StrongName.1.60.1\lib\net451\Dapper.StrongName.dll</HintPath>
     </Reference>
+    <Reference Include="Distancify.LitiumAddOns.Foundation, Version=2.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Distancify.LitiumAddOns.Foundation.2.0.21\lib\net472\Distancify.LitiumAddOns.Foundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Distancify.LitiumAddOns.MediaMapper, Version=0.4.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Distancify.LitiumAddOns.MediaMapper.0.4.14\lib\net472\Distancify.LitiumAddOns.MediaMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Distancify.Migrations, Version=2019.7.4.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Distancify.Migrations.2019.7.4.1-ci\lib\netstandard2.0\Distancify.Migrations.dll</HintPath>
     </Reference>
@@ -509,9 +515,7 @@
     <Compile Include="Conditions\Category\ConditionServiceResolver.cs" />
     <Compile Include="Extensions\AddressExtensions.cs" />
     <Compile Include="Extensions\BaseProductExtensions.cs" />
-    <Compile Include="Extensions\BaseProductServiceExtensions.cs" />
     <Compile Include="Extensions\CategoryServiceExtensions.cs" />
-    <Compile Include="Extensions\ChannelServiceExtensions.cs" />
     <Compile Include="Extensions\FieldDefinitionExtensions.cs" />
     <Compile Include="Extensions\FieldFrameworkExtensions.cs" />
     <Compile Include="Extensions\FieldTemplateFieldGroupExtensions.cs" />
@@ -519,12 +523,9 @@
     <Compile Include="Extensions\MediaFieldTemplateServiceExtensions.cs" />
     <Compile Include="Extensions\OrderCarrierExtensions.cs" />
     <Compile Include="Extensions\OrderExtensions.cs" />
-    <Compile Include="Extensions\OrganizationExtensions.cs" />
     <Compile Include="Extensions\PageExtensions.cs" />
-    <Compile Include="Extensions\PageTypeDefinitionExtensions.cs" />
     <Compile Include="Extensions\PriceListExtensions.cs" />
     <Compile Include="Extensions\PriceListServiceExtensions.cs" />
-    <Compile Include="Extensions\PropertyCollectionExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\VariantExtensions.cs" />
     <Compile Include="Extensions\VariantServiceExtensions.cs" />
@@ -561,14 +562,6 @@
     <Compile Include="PIM\WorkflowAutomations\PublishProductAutomation.cs" />
     <Compile Include="PIM\WorkflowAutomations\UnpublishProductAutomation.cs" />
     <Compile Include="PIM\WorkflowAutomations\WorkflowAutomation.cs" />
-    <Compile Include="ProductMedia\Mapping\BaseMediaProfiler.cs" />
-    <Compile Include="ProductMedia\Mapping\IFieldSetter.cs" />
-    <Compile Include="ProductMedia\Mapping\IMediaMapper.cs" />
-    <Compile Include="ProductMedia\Mapping\IMediaProfiler.cs" />
-    <Compile Include="ProductMedia\Mapping\MediaMapper.cs" />
-    <Compile Include="ProductMedia\Mapping\MediaPointerFileFieldMediaSetter.cs" />
-    <Compile Include="ProductMedia\Mapping\MediaPointerImageArrayFieldMediaSetter.cs" />
-    <Compile Include="ProductMedia\Mapping\MediaProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CampaignService.cs" />
     <Compile Include="Services\CMSService.cs" />
@@ -580,7 +573,6 @@
     <Compile Include="Services\IOrganizationService.cs" />
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="Services\OrganizationService.cs" />
-    <Compile Include="Tasks\ProductMediaMapperTask.cs" />
     <Compile Include="Tasks\Synchronization\ITaskSynchronizer.cs" />
     <Compile Include="Tasks\Synchronization\TaskSynchronizer.cs" />
     <Compile Include="Tasks\WorkflowAutomationsTask.cs" />
@@ -596,9 +588,7 @@
     <Compile Include="Wrappers\IRepository.cs" />
     <Compile Include="Wrappers\LitiumAggregateRoot.cs" />
     <Compile Include="Wrappers\MediaArchive\IFileMetadataProvider.cs" />
-    <Compile Include="Wrappers\MediaArchive\IMediaArchive.cs" />
     <Compile Include="Wrappers\MediaArchive\LitiumFileMetadataProvider.cs" />
-    <Compile Include="Wrappers\MediaArchive\MediaArchive.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -607,6 +597,9 @@
     <None Include="migrationConfigration.yml.example" />
     <None Include="NLog.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProductMedia\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
