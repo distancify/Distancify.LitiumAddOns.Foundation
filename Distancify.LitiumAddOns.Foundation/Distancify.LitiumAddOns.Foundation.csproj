@@ -563,10 +563,8 @@
     <Compile Include="PIM\WorkflowAutomations\UnpublishProductAutomation.cs" />
     <Compile Include="PIM\WorkflowAutomations\WorkflowAutomation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CampaignService.cs" />
     <Compile Include="Services\CMSService.cs" />
     <Compile Include="Services\DeliveryMethodService.cs" />
-    <Compile Include="Services\ICampaignService.cs" />
     <Compile Include="Services\ICMSService.cs" />
     <Compile Include="Services\IDeliveryMethodService.cs" />
     <Compile Include="Services\IOrderService.cs" />
@@ -575,8 +573,6 @@
     <Compile Include="Tasks\Synchronization\TaskSynchronizer.cs" />
     <Compile Include="Tasks\WorkflowAutomationsTask.cs" />
     <Compile Include="Temporary\BaseTemplateDefinition.cs" />
-    <Compile Include="Wrappers\ECommerce\ICampaign.cs" />
-    <Compile Include="Wrappers\ECommerce\LitiumCampaign.cs" />
     <Compile Include="Wrappers\Exceptions\NotFoundException.cs" />
     <Compile Include="Wrappers\IEntity.cs" />
     <Compile Include="Wrappers\IRepository.cs" />
