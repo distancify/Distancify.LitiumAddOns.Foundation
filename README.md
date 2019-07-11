@@ -1,3 +1,7 @@
+# Deprecated project
+
+This project is deprecated and should not be used by new projects.
+
 # Distancify.LitiumAddOns.Foundation
 
 [![Build status](https://ci.appveyor.com/api/projects/status/0lyu8fx7s67is8wv?svg=true)](https://ci.appveyor.com/project/KristofferLindvall/distancify-litiumaddons-foundation)
