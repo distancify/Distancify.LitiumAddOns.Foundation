@@ -551,7 +551,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Distancify.LitiumAddOns.Foundation.nuspec" />
-    <None Include="LocalDev.ConnectionStrings.Template.config" />
     <None Include="NLog.config" />
     <None Include="packages.config" />
   </ItemGroup>
