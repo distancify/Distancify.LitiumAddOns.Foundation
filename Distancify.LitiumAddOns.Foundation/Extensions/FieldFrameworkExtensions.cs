@@ -39,7 +39,7 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
                 return uiCultureFallbackValue;
             }
 
-            return default;
+            return default(T);
 
             bool ValueIsSet(T valueToCheck)
             {
