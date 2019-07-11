@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Distancify.Migrations.Litium.Seeds;
 using Litium.FieldFramework;
 using Litium.FieldFramework.FieldTypes;
 using Litium.Globalization;
@@ -57,7 +56,7 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
                 return translation;
             }
 
-            if (option.Name.TryGetValue(Cultures.en_US, out translation) && !string.IsNullOrEmpty(translation))
+            if (option.Name.TryGetValue("en-US", out translation) && !string.IsNullOrEmpty(translation))
             {
                 return translation;
             }

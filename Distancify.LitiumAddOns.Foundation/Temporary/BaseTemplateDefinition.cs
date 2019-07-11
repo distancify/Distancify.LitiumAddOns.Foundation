@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Distancify.Migrations.Litium.Seeds;
 using Litium.FieldFramework;
 using Litium.Runtime.AutoMapper;
 using Litium.Runtime.DependencyInjection;
@@ -25,8 +24,8 @@ namespace Distancify.LitiumAddOns.Foundation.Temporary
                 Collapsed = false,
                 Localizations =
                 {
-                    [Cultures.sv_SE] = {Name = "Allmänt"},
-                    [Cultures.en_US] = {Name = "General"},
+                    ["sv-SE"] = {Name = "Allmänt"},
+                    ["en-US"] = {Name = "General"},
                 },
                 Fields =
                 {

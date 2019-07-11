@@ -60,12 +60,6 @@
     <Reference Include="Distancify.LitiumAddOns.MediaMapper, Version=0.4.14.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Distancify.LitiumAddOns.MediaMapper.0.4.14\lib\net472\Distancify.LitiumAddOns.MediaMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Distancify.Migrations, Version=2019.7.4.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Distancify.Migrations.2019.7.4.1-ci\lib\netstandard2.0\Distancify.Migrations.dll</HintPath>
-    </Reference>
-    <Reference Include="Distancify.Migrations.Litium, Version=2019.7.7.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Distancify.Migrations.Litium.2019.7.7.1-ci\lib\net472\Distancify.Migrations.Litium.dll</HintPath>
-    </Reference>
     <Reference Include="Distancify.SerilogExtensions, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Distancify.SerilogExtensions.1.0.7\lib\netstandard2.0\Distancify.SerilogExtensions.dll</HintPath>
     </Reference>
@@ -558,7 +552,6 @@
     <None Include="app.config" />
     <None Include="Distancify.LitiumAddOns.Foundation.nuspec" />
     <None Include="LocalDev.ConnectionStrings.Template.config" />
-    <None Include="migrationConfigration.yml.example" />
     <None Include="NLog.config" />
     <None Include="packages.config" />
   </ItemGroup>
