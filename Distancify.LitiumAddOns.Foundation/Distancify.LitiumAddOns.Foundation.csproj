@@ -532,7 +532,6 @@
     <Compile Include="Foundation\InversionOfControl\ComponentRegistrationExtensions.cs" />
     <Compile Include="Foundation\Json\JSONArrayStreamReader.cs" />
     <Compile Include="Foundation\ServiceRegistration.cs" />
-    <Compile Include="Foundation\XML\XMLConvertible.cs" />
     <Compile Include="Integrations\AzureServiceBus\AzureServiceBusConstants.cs" />
     <Compile Include="Integrations\AzureServiceBus\BatchMessageQueueListener.cs" />
     <Compile Include="Integrations\AzureServiceBus\MessageQueueListener.cs" />
