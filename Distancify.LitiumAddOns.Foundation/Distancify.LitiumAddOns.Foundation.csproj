@@ -54,12 +54,6 @@
     <Reference Include="Dapper.StrongName, Version=1.60.0.0, Culture=neutral, PublicKeyToken=e3e8412083d25dd3, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.StrongName.1.60.1\lib\net451\Dapper.StrongName.dll</HintPath>
     </Reference>
-    <Reference Include="Distancify.Migrations, Version=2019.7.4.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Distancify.Migrations.2019.7.4.1-ci\lib\netstandard2.0\Distancify.Migrations.dll</HintPath>
-    </Reference>
-    <Reference Include="Distancify.Migrations.Litium, Version=2019.7.7.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Distancify.Migrations.Litium.2019.7.7.1-ci\lib\net472\Distancify.Migrations.Litium.dll</HintPath>
-    </Reference>
     <Reference Include="Distancify.SerilogExtensions, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Distancify.SerilogExtensions.1.0.7\lib\netstandard2.0\Distancify.SerilogExtensions.dll</HintPath>
     </Reference>
@@ -552,8 +546,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Distancify.LitiumAddOns.Foundation.nuspec" />
-    <None Include="LocalDev.ConnectionStrings.Template.config" />
-    <None Include="migrationConfigration.yml.example" />
     <None Include="NLog.config" />
     <None Include="packages.config" />
   </ItemGroup>
