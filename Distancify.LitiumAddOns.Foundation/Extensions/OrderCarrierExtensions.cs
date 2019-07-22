@@ -6,6 +6,11 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class OrderCarrierExtensions
     {
+        public static string GetAdditionalOrderInfoValue(this OrderCarrier orderCarrier, string key)
+        {
+            return orderCarrier.GetAdditionalOrderInfoCarrier(key)?.Value;
+        }
+
         public static void SetAdditionalOrderInfoValue(this OrderCarrier orderCarrier, string key, string value)
         {
             var additionalInfoCarrier = orderCarrier.GetAdditionalOrderInfoCarrier(key);
