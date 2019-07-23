@@ -497,6 +497,7 @@
     <Compile Include="Extensions\BaseProductExtensions.cs" />
     <Compile Include="Extensions\BaseProductServiceExtensions.cs" />
     <Compile Include="Extensions\CategoryServiceExtensions.cs" />
+    <Compile Include="Extensions\ChannelServiceExtensions.cs" />
     <Compile Include="Extensions\FieldDefinitionExtensions.cs" />
     <Compile Include="Extensions\FieldFrameworkExtensions.cs" />
     <Compile Include="Extensions\FieldTemplateFieldGroupExtensions.cs" />
