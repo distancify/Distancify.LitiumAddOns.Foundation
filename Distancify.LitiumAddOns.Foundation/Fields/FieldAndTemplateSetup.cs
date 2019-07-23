@@ -78,8 +78,6 @@ namespace Distancify.LitiumAddOns.Foundation.Fields
             }
         }
 
-
-
         private void SetupTemplate(FieldTemplate<TArea> newFieldTemplate)
         {
             var currentFieldTemplate = _fieldTemplateService.Get<FieldTemplate<TArea>>(newFieldTemplate.Id);
