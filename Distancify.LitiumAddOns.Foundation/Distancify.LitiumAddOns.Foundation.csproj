@@ -57,9 +57,6 @@
     <Reference Include="Distancify.LitiumAddOns.Foundation, Version=2.0.21.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Distancify.LitiumAddOns.Foundation.2.0.21\lib\net472\Distancify.LitiumAddOns.Foundation.dll</HintPath>
     </Reference>
-    <Reference Include="Distancify.LitiumAddOns.MediaMapper, Version=0.4.14.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Distancify.LitiumAddOns.MediaMapper.0.4.14\lib\net472\Distancify.LitiumAddOns.MediaMapper.dll</HintPath>
-    </Reference>
     <Reference Include="Distancify.SerilogExtensions, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Distancify.SerilogExtensions.1.0.7\lib\netstandard2.0\Distancify.SerilogExtensions.dll</HintPath>
     </Reference>
