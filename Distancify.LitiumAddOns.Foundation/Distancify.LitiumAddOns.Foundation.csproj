@@ -538,6 +538,7 @@
     <Compile Include="Services\IDeliveryMethodService.cs" />
     <Compile Include="Services\IOrderService.cs" />
     <Compile Include="Services\OrderService.cs" />
+    <Compile Include="StateMachine\FiniteStateTransitionBuilder.cs" />
     <Compile Include="Tasks\Synchronization\ITaskSynchronizer.cs" />
     <Compile Include="Tasks\Synchronization\TaskSynchronizer.cs" />
     <Compile Include="Temporary\BaseTemplateDefinition.cs" />
