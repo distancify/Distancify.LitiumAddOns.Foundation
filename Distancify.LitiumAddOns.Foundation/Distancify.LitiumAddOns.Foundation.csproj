@@ -54,9 +54,6 @@
     <Reference Include="Dapper.StrongName, Version=1.60.0.0, Culture=neutral, PublicKeyToken=e3e8412083d25dd3, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.StrongName.1.60.1\lib\net451\Dapper.StrongName.dll</HintPath>
     </Reference>
-    <Reference Include="Distancify.LitiumAddOns.Foundation, Version=2.0.21.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Distancify.LitiumAddOns.Foundation.2.0.21\lib\net472\Distancify.LitiumAddOns.Foundation.dll</HintPath>
-    </Reference>
     <Reference Include="Distancify.SerilogExtensions, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Distancify.SerilogExtensions.1.0.7\lib\netstandard2.0\Distancify.SerilogExtensions.dll</HintPath>
     </Reference>
