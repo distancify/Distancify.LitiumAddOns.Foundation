@@ -16,50 +16,52 @@ namespace Distancify.LitiumAddOns.Foundation.Localization
         public void Setup(Guid websiteId, bool overwriteExisting)
         {
             var websiteService = Litium.IoC.Resolve<WebsiteService>();
+            var website = websiteService.Get(websiteId)?.MakeWritableClone();
 
-            var website = websiteService.Get(websiteId);
             if (website == null)
             {
                 return;
             }
 
             var dirty = false;
-            website = website.MakeWritableClone();
-
             var channelService = Litium.IoC.Resolve<ChannelService>();
-            var channel = channelService.GetAll().FirstOrDefault(c => c.WebsiteSystemId.HasValue && c.WebsiteSystemId.Equals(website.SystemId));
-            if (channel == null)
+            var channels = channelService.GetAll().Where(c => c.WebsiteSystemId.HasValue && 
+                                                              c.WebsiteSystemId.Equals(website.SystemId) &&
+                                                              c.WebsiteLanguageSystemId.HasValue);
+            if (!channels.Any())
             {
                 return;
             }
 
             var languageService = Litium.IoC.Resolve<LanguageService>();
-            var language = languageService.Get(channel.WebsiteLanguageSystemId.Value);
-
-            var culture = language.CultureInfo.Name;
             var typeUnproxied = this.GetTypeUnproxied();
+            var cultures = channels.Select(c => languageService.Get(c.WebsiteLanguageSystemId.Value).CultureInfo.Name)
+                                   .Distinct();
 
             try
             {
-                foreach (var property in typeUnproxied.GetProperties())
+                foreach (var culture in cultures)
                 {
-                    var key = property.Name;
-                    var translations = Enumerable.Cast<TranslationAttribute>(typeUnproxied.GetProperty(property.Name).GetCustomAttributes(typeof(TranslationAttribute), true));
-                    var translationAttribute = translations.FirstOrDefault(x => culture.Equals(x.Culture, StringComparison.InvariantCultureIgnoreCase)) ?? translations.FirstOrDefault(x => x.Culture == null);
-
-                    if (translationAttribute != null)
+                    foreach (var property in typeUnproxied.GetProperties())
                     {
-                        var stringAttribute = PropertyInfoExtensions.GetCustomAttributes<StringAttribute>(typeUnproxied.GetProperty(property.Name)).FirstOrDefault();
-                        if (stringAttribute != null && !string.IsNullOrEmpty(stringAttribute.Prefix))
-                            key = stringAttribute.Prefix + key;
+                        var key = property.Name;
+                        var translations = Enumerable.Cast<TranslationAttribute>(typeUnproxied.GetProperty(property.Name).GetCustomAttributes(typeof(TranslationAttribute), true));
+                        var translationAttribute = translations.FirstOrDefault(x => culture.Equals(x.Culture, StringComparison.InvariantCultureIgnoreCase)) ?? translations.FirstOrDefault(x => x.Culture == null);
 
-                        var overwrite = overwriteExisting || translationAttribute.Overwrite;
-                        var currentText = website.Texts[key, culture];
-
-                        if (currentText == null || (overwrite && !translationAttribute.Text.Equals(currentText)))
+                        if (translationAttribute != null)
                         {
-                            website.Texts.AddOrUpdateValue(key, culture, translationAttribute.Text);
-                            dirty = true;
+                            var stringAttribute = PropertyInfoExtensions.GetCustomAttributes<StringAttribute>(typeUnproxied.GetProperty(property.Name)).FirstOrDefault();
+                            if (stringAttribute != null && !string.IsNullOrEmpty(stringAttribute.Prefix))
+                                key = stringAttribute.Prefix + key;
+
+                            var overwrite = overwriteExisting || translationAttribute.Overwrite;
+                            var currentText = website.Texts[key, culture];
+
+                            if (currentText == null || (overwrite && !translationAttribute.Text.Equals(currentText)))
+                            {
+                                website.Texts.AddOrUpdateValue(key, culture, translationAttribute.Text);
+                                dirty = true;
+                            }
                         }
                     }
                 }
