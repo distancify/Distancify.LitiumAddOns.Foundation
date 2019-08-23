@@ -187,6 +187,12 @@ namespace Distancify.LitiumAddOns.Foundation.Services
 
                             if (inventoryItem != null)
                             {
+                                var matchingInventoryItemQueuedForUpdate = inventoriesToUpdate.FirstOrDefault(i => i.SystemId.Equals(inventoryItem.SystemId) && i.VariantSystemId.Equals(inventoryItem.VariantSystemId));
+                                if (matchingInventoryItemQueuedForUpdate != null)
+                                {
+                                    inventoryItem = matchingInventoryItemQueuedForUpdate;
+                                }
+
                                 var stockToReduce = Math.Min(inventoryItem.InStockQuantity, stockLeftToReduce);
                                 inventoryItem.InStockQuantity -= stockToReduce;
                                 stockLeftToReduce -= stockToReduce;
