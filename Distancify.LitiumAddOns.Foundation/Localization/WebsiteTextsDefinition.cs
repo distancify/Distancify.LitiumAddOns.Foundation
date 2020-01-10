@@ -35,8 +35,7 @@ namespace Distancify.LitiumAddOns.Foundation.Localization
 
             var languageService = Litium.IoC.Resolve<LanguageService>();
             var typeUnproxied = this.GetTypeUnproxied();
-            var cultures = channels.Select(c => languageService.Get(c.WebsiteLanguageSystemId.Value).CultureInfo.Name)
-                                   .Distinct();
+            var cultures = languageService.GetAll().Select(l => l.CultureInfo.Name).Distinct();
 
             try
             {
