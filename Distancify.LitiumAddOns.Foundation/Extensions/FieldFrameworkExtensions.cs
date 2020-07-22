@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using Litium;
 using Litium.FieldFramework;
 using Litium.Globalization;
 
@@ -6,18 +7,22 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
 {
     public static class FieldFrameworkExtensions
     {
-        public static T GetValueWithFallback<T>(this IFieldFramework fieldFramework, string fieldName, CultureInfo currentCulture)
-        {   
-            currentCulture = currentCulture ?? CultureInfo.CurrentCulture;
+        public static T GetValueWithFallback<T>(this IFieldFramework fieldFramework, string fieldName, CultureInfo mainCulture)
+        {
+            return fieldFramework.GetValueWithFallback<T>(fieldName, mainCulture, IoC.Resolve<LanguageService>());
+        }
 
-            var fieldValue = fieldFramework.GetValue<T>(fieldName, currentCulture);
+        public static T GetValueWithFallback<T>(this IFieldFramework fieldFramework, string fieldName, CultureInfo mainCulture, LanguageService languageService)
+        {
+            mainCulture = mainCulture ?? CultureInfo.CurrentCulture;
+
+            var fieldValue = fieldFramework.GetValue<T>(fieldName, mainCulture);
             if (ValueIsSet(fieldValue))
             {
                 return fieldValue;
             }
 
-            var languageService = Litium.IoC.Resolve<LanguageService>();
-            var currentLanguage = languageService?.Get(currentCulture.Name);
+            var currentLanguage = languageService?.Get(mainCulture.Name);
 
             if (currentLanguage?.FallbackLanguages != null)
             {
@@ -27,14 +32,14 @@ namespace Distancify.LitiumAddOns.Foundation.Extensions
                     var fallbackFieldValue = fieldFramework.GetValue<T>(fieldName, fallbackLanguage.CultureInfo);
 
                     if (ValueIsSet(fallbackFieldValue))
-                    { 
+                    {
                         return fallbackFieldValue;
                     }
                 }
             }
 
             var uiCultureFallbackValue = fieldFramework.GetValue<T>(fieldName, CultureInfo.CurrentUICulture);
-            if(ValueIsSet(uiCultureFallbackValue))
+            if (ValueIsSet(uiCultureFallbackValue))
             {
                 return uiCultureFallbackValue;
             }
